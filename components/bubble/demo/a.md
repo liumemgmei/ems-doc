@@ -28,7 +28,7 @@ class BubbleButton extends React.Component {
         <React.Fragment>
             <div style={divstyle}>
                 <Bubble>
-                    <a href="http://ems.wankeauto.com/#/home_general">
+                    <a href="http://ems.wankeauto.com/#/home_general" target="_blank">
                         2018 万克能源科技有限公司 All Rights Reserved
                     </a>
                 </Bubble>
