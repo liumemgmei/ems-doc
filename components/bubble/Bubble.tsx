@@ -7,7 +7,7 @@ import * as React from 'react';
 import $ from 'jquery';
 import {Popover} from 'antd';
 import shouldComponentUpdate from 'shouldComponentUpdate';
-import './style/index';
+import './style/index.less';
 class Bubble extends React.Component {
     constructor(props) {
         super(props);
@@ -105,8 +105,6 @@ class Bubble extends React.Component {
         if (typeof children === 'object' && children.type.name === 'Popover') {
             if (children.type.name === 'Popover') {
                 const {children: popoverChildren,...otherPopoverProps} = children.props;
-                console.log('otherPopoverProps',otherPopoverProps)
-
                 return this._changePopover({
                     children: popoverChildren,
                     className: _className,
@@ -119,7 +117,7 @@ class Bubble extends React.Component {
             placement: placement,
             children: children,
             className: _className,
-            content: text?text:children,
+            content: text ? text : children,
             style: style
         });
     }
