@@ -84,15 +84,20 @@ class Bubble extends React.Component {
     }
 
     _changePopover = (props)=>{
-        const {otherPopoverProps} = props;
+        const {otherPopoverProps, style} = props;
         const cell = this._renderCell(props);
-        return (
-            <Popover
-                {...otherPopoverProps}
-            >
-                {cell}
-            </Popover>
-        );
+        if (style.overflow === 'hidden') {
+            return (
+                <Popover
+                    {...otherPopoverProps}
+                >
+                    {cell}
+                </Popover>
+            );
+        }
+        else{
+            return cell;
+        }
     }
 
     render() {
