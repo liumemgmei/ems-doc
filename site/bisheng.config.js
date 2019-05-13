@@ -13,6 +13,13 @@ function alertBabelConfig(rules) {
       if (rule.options.plugins.indexOf(replaceLib) === -1) {
         rule.options.plugins.push(replaceLib);
       }
+      rule.options.plugins.push([
+        'import', {
+          libraryName: 'antd',
+          libraryDirectory: 'es',
+          style: true,
+        },
+      ]);
       rule.options.plugins = rule.options.plugins.filter(plugin => (
         !plugin.indexOf || plugin.indexOf('babel-plugin-add-module-exports') === -1
       ));
@@ -84,9 +91,9 @@ module.exports = {
   },
   webpackConfig(config) {
     config.resolve.alias = {
-      'antd/lib': path.join(process.cwd(), 'components'),
-      'antd/es': path.join(process.cwd(), 'components'),
-      antd: path.join(process.cwd(), 'index'),
+      components: path.join(process.cwd(), 'components'),
+      eq: path.join(process.cwd(), 'components/_util/utils/eq.js'),
+      shouldComponentUpdate: path.join(process.cwd(), 'components/_util/utils/shouldComponentUpdate.js'),
       site: path.join(process.cwd(), 'site'),
       'react-router': 'react-router/umd/ReactRouter',
     };

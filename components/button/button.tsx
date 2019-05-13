@@ -10,7 +10,6 @@ const isTwoCNChar = rxTwoCNChar.test.bind(rxTwoCNChar);
 function isString(str: any) {
   return typeof str === 'string';
 }
-
 // Insert one space between two chinese characters automatically.
 function insertSpace(child: React.ReactChild, needInserted: boolean) {
   // Check the child if is undefined or null.

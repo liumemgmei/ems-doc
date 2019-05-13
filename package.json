@@ -1,5 +1,5 @@
 {
-  "name": "antd",
+  "name": "antdwanke",
   "version": "3.6.4",
   "title": "Ant Design",
   "description": "An enterprise-class UI design language and React-based implementation",
@@ -39,6 +39,7 @@
     "react-dom": ">=16.0.0"
   },
   "dependencies": {
+    "antd": "^3.17.0",
     "array-tree-filter": "^2.0.0",
     "babel-runtime": "6.x",
     "classnames": "~2.2.0",
@@ -47,6 +48,7 @@
     "dom-closest": "^0.2.0",
     "enquire.js": "^2.1.1",
     "intersperse": "^1.0.0",
+    "jquery": "^3.4.1",
     "lodash": "^4.17.5",
     "moment": "^2.19.3",
     "omit.js": "^1.0.0",
@@ -174,9 +176,9 @@
     "xhr2": "^0.1.3"
   },
   "scripts": {
-    "test": "jest --config .jest.js",
-    "test-node": "jest --config .jest.node.js",
-    "test-all": "./scripts/test-all.sh",
+    "test-liumm": "jest --config .jest.js",
+    "test-node-liumm": "jest --config .jest.node.js",
+    "test-all-liumm": "./scripts/test-all.sh",
     "lint": "npm run lint:ts && npm run lint:es && npm run lint:demo && npm run lint:style",
     "lint:ts": "npm run tsc && antd-tools run ts-lint",
     "lint:es": "eslint tests site scripts components ./.eslintrc.js ./webpack.config.js --ext '.js,.jsx'",
@@ -196,8 +198,8 @@
     "predeploy": "antd-tools run clean && npm run site && cp netlify.toml _site",
     "deploy": "bisheng gh-pages --push-only",
     "pub": "antd-tools run pub",
-    "prepublish": "antd-tools run guard",
-    "pre-publish": "npm run test-all && node ./scripts/prepub",
+    "prepublish-liumm": "antd-tools run guard",
+    "pre-publish-liumm": "npm run test-all && node ./scripts/prepub",
     "authors": "git log --format='%aN <%aE>' | sort -u | grep -v 'users.noreply.github.com' | grep -v 'gitter.im' | grep -v '.local>' | grep -v 'alibaba-inc.com' | grep -v 'alipay.com' | grep -v 'taobao.com' > AUTHORS.txt",
     "lint-staged": "lint-staged",
     "lint-staged:ts": "tsc && node node_modules/tslint/bin/tslint",
@@ -216,7 +218,7 @@
       "npm run lint-staged:demo"
     ]
   },
-  "pre-commit": [
+  "pre-commit-liumm": [
     "lint-staged"
   ],
   "sideEffects": [

@@ -109,7 +109,7 @@ export default class ComponentDoc extends React.Component {
             </h2>
           </section>
           <Row gutter={16}>
-            <Col span={isSingleCol ? '24' : '12'}
+            <Col span={isSingleCol ? 24 : 12}
               className={
                 isSingleCol
                   ? 'code-boxes-col-1-1'
