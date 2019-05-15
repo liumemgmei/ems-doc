@@ -31,6 +31,15 @@ function alertBabelConfig(rules) {
 
 module.exports = {
   port: 8001,
+  devServerConfig: {
+    proxy: {
+    //   '/enums': 'http://192.168.2.13:4050',
+      '/ems': {
+        target: 'http://192.168.2.13:4050',
+        pathRewrite: { '^/ems': '' },
+      },
+    },
+  },
   source: {
     components: './components',
     // docs: './docs',
@@ -61,8 +70,14 @@ module.exports = {
       'Data Entry': 3,
       'Data Display': 4,
       Feedback: 5,
-      Localization: 6,
-      Other: 7,
+      Other: 6,
+      通用: 0,
+      布局: 1,
+      导航: 2,
+      数据录入: 3,
+      数据展示: 4,
+      反馈: 5,
+      其他: 6,
     },
     docVersions: {
       '0.9.x': 'http://09x.ant.design',

@@ -1,8 +1,8 @@
 ---
 category: Components
 type: 通用
-title: Button
-subtitle: 按钮
+title: Bubble
+subtitle: 溢出气泡
 ---
 
 容器内文本如果出现了省略号，则自动增加气泡提示的功能

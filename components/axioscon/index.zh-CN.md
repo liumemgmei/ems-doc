@@ -1,8 +1,8 @@
 ---
 category: Components
-type: 通用
-title: Button
-subtitle: 按钮
+type: 反馈
+title: axiosCon
+subtitle: 请求遮罩层
 ---
 
 容器内文本如果出现了省略号，则自动增加气泡提示的功能

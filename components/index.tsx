@@ -14,3 +14,5 @@ if (ENV !== 'production' &&
 /* @remove-on-es-build-end */
 
 export { default as Bubble } from './bubble';
+export { default as axiosCon } from './axioscon';
+export { default as Button} from './button';
