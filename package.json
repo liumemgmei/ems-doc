@@ -1,6 +1,6 @@
 {
   "name": "ems",
-  "version": "1.5.13",
+  "version": "1.5.14",
   "title": "Ant Design",
   "description": "An enterprise-class UI design language and React-based implementation",
   "homepage": "http://ant.design/",
@@ -31,7 +31,8 @@
   "files": [
     "dist",
     "lib",
-    "es"
+    "es",
+    "components"
   ],
   "typings": "lib/index.d.ts",
   "license": "MIT",
