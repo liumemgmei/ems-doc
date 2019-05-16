@@ -22,6 +22,16 @@ class Con extends React.Component {
     }
     axios = ()=>{
         this.props.axios('get','/ems/enums/energyUnit/byStationCode/false')
+        .then((res)=>{
+                    console.log('haha1');
+
+            return new Promise((resolve)=>{
+                setTimeout(()=>{
+                    console.log('haha');
+                    resolve();
+                },10000);
+            })
+        })
     }
 
     render() {

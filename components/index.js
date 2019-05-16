@@ -6,8 +6,11 @@ if (ENV !== 'production' &&
     typeof console !== 'undefined' &&
     console.warn &&
     typeof window !== 'undefined') {
-    console.warn('You are using a whole package of antd, ' +
-        'please use https://www.npmjs.com/package/babel-plugin-import to reduce app bundle size.');
+  console.warn(
+    'You are using a whole package of antd, ' +
+    'please use https://www.npmjs.com/package/babel-plugin-import to reduce app bundle size.',
+  );
 }
 /* @remove-on-es-build-end */
+
 export { default as Bubble } from './bubble';

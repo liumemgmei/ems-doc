@@ -23,7 +23,7 @@ function getSuffix(data, url) {
 }
 
 export default function myAxios(method, url,data,firmId = sessionStorage.getItem('firmId')) {
-    url = url+'/ems';
+    // url = url+'/ems';
     firmId = firmId || 7477;
 	//判断浏览器中的全局是否存在
 	//请求方式统一大写
