@@ -108,6 +108,7 @@ module.exports = {
     config.resolve.alias = {
       components: path.join(process.cwd(), 'components'),
       eq: path.join(process.cwd(), 'components/_util/utils/eq.js'),
+      utils: path.join(process.cwd(), 'components/_util/utils/utils.js'),
       shouldComponentUpdate: path.join(process.cwd(), 'components/_util/utils/shouldComponentUpdate.js'),
       site: path.join(process.cwd(), 'site'),
       'react-router': 'react-router/umd/ReactRouter',
