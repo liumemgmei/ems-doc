@@ -1,6 +1,6 @@
 {
   "name": "ems",
-  "version": "1.5.15",
+  "version": "1.5.14",
   "title": "Ant Design",
   "description": "An enterprise-class UI design language and React-based implementation",
   "homepage": "http://ant.design/",
@@ -26,7 +26,7 @@
     "url": "https://github.com/ant-design/ant-design/issues"
   },
   "main-liumm": "lib/index.js",
-  "main": "components/index.tsx",
+  "main": "components/index.js",
   "module-liumm": "es/index.js",
   "files": [
     "dist",
