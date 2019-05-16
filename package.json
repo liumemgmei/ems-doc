@@ -25,7 +25,8 @@
   "bugs": {
     "url": "https://github.com/ant-design/ant-design/issues"
   },
-  "main": "lib/index.js",
+  "main-liumm": "lib/index.js",
+  "main": "components/index.js",
   "module": "es/index.js",
   "files": [
     "dist",
