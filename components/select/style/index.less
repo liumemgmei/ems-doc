@@ -1,0 +1,377 @@
+@hoverColor: #ffffff;
+@white:#fff;
+@black:#333;
+@basicPurple:#7169cc;
+
+
+.space-gray {
+  .z_selection.line {
+    z-index: 2;
+    position: relative;
+    display: inline-block;
+      >.label{
+          color: #fff;
+          display: block;
+          float: left;
+          line-height: 33px;
+          margin-right: 10px;
+      }
+      .ant-select-selection:hover{
+          border-color: #40a9ff;
+      }
+      .ant-select-selection:focus{
+          border-color: #40a9ff;
+      }
+    .ant-select-selection {
+      height: 34px;
+      //width: 170px;
+      position: relative;
+      box-sizing: border-box;
+      cursor: pointer;
+      border-radius: 4px;
+      background-color: rgba(0, 0, 0, 0);
+      border: 1px solid #525760;
+      //float: left;
+      text-align: left;
+      font-size: 14px;
+      .ant-select-selection__rendered {
+          width: 140px;
+          line-height: 33px;
+          color: #FFFFFF;
+          .ant-select-selection__placeholder {
+          display: inherit;
+          font-size: 14px;
+        }
+      }
+      .ant-select-arrow {
+        color: #FFFFFF;
+        top: 18%;
+        right: 0px;
+        width: 15%;
+        height: 100%;
+        background-color: inherit;
+        border-left: 1px solid #525760;
+      }
+      .ant-select-arrow:before {
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        position: relative;
+      }
+      .ant-select-search__field__wrap input {
+        text-align: left;
+      }
+
+    }
+    .ant-select-focused .ant-select-selection, .ant-select-selection:focus, .ant-select-selection:active {
+      box-shadow: none;
+      //border-bottom: 1px solid #40a9ff;
+    }
+    .ant-select-open .ant-select-selection {
+      border-bottom: 1px solid #40a9ff;
+      box-shadow: none;
+    }
+    .ant-select-selection-selected-value {
+      padding-right: 1px;
+      width: 90%;
+      color: @white;
+    }
+    .ant-select-search--inline {
+      top: 2px
+    }
+  }
+  .z_selection.circle {
+    height: 45px;
+    font-family: "微软雅黑";
+    z-index: 4;
+    position: relative;
+    display: inline-block;
+    .ant-select-selection {
+      height: 34px;
+      //width: 170px;
+      position: relative;
+      box-sizing: border-box;
+      cursor: pointer;
+      border: 1px solid #00a8f5;
+      background-color: #1b1c20;
+      //float: left;
+      border-radius: 14px;
+      text-align: center;
+      font-size: 16px;
+      .ant-select-arrow {
+        right: 0px;
+        background-position-y: 2px;
+        background-size: 89%;
+        width: 23px;
+        height: 22px;
+        color: #00a8f5;
+        font-size: 14px;
+      }
+      .ant-select-search__field__wrap input {
+        text-align: left;
+      }
+
+    }
+    .ant-select-selection-selected-value {
+      padding-right: 0;
+      margin-top: 2px;
+      width: 100%;
+      color: @white;
+    }
+    .ant-select-selection__rendered {
+      font-size: 14px;
+    }
+  }
+}
+
+.mint-green {
+  .z_selection.line {
+    z-index: 2;
+    position: relative;
+    display: inline-block;
+      >.label{
+          color: black;
+          display: block;
+          float: left;
+          line-height: 33px;
+          margin-right: 10px;
+      }
+      .ant-select-selection:hover{
+          border-color: #40a9ff;
+      }
+    .ant-select-selection {
+      height: 34px;
+      //width: 170px;
+      position: relative;
+      box-sizing: border-box;
+      cursor: pointer;
+      border-radius: 4px;
+      background-color: rgba(0, 0, 0, 0);
+      border: 1px solid #e6e6e6;
+      //float: left;
+      text-align: left;
+      font-size: 14px;
+      .ant-select-selection__rendered {
+          width: 140px;
+          line-height: 33px;
+          .ant-select-selection__placeholder {
+          display: inherit;
+          font-size: 14px;
+        }
+      }
+      .ant-select-arrow {
+        color: #000;
+        top: 18%;
+        right: 0px;
+        width: 15%;
+        height: 100%;
+        background-color: inherit;
+        border-left: 1px solid #e6e6e6;
+        //.ant-select-arrow-icon{
+        //    display: inline-block;
+        //    top: 9px;
+        //    position: relative;
+        //}
+
+      }
+      .ant-select-arrow:before {
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        position: relative;
+      }
+      .ant-select-search__field__wrap input {
+        text-align: left;
+      }
+
+    }
+    .ant-select-focused .ant-select-selection, .ant-select-selection:focus, .ant-select-selection:active {
+      box-shadow: none;
+      //border: 1px solid #40a9ff;
+    }
+    .ant-select-open .ant-select-selection {
+      border: 1px solid #40a9ff;
+      box-shadow: none;
+    }
+    .ant-select-selection-selected-value {
+      padding-right: 1px;
+      width: 90%;
+      color: #000000;
+    }
+    .ant-select-search--inline {
+      top: 2px
+    }
+  }
+  .z_selection.circle {
+    height: 45px;
+    font-family: "微软雅黑";
+    z-index: 4;
+    position: relative;
+    display: inline-block;
+    .ant-select-selection {
+      height: 30px;
+      //width: 170px;
+      position: relative;
+      box-sizing: border-box;
+      cursor: pointer;
+      border: 1px solid #18d190;
+      background-color: @white;
+      //float: left;
+      border-radius: 14px;
+      text-align: center;
+      font-size: 16px;
+      .ant-select-arrow {
+        right: 0px;
+        background-position-y: 2px;
+        background-size: 89%;
+        width: 23px;
+        height: 22px;
+        color: #18d190;
+        font-size: 14px;
+      }
+      .ant-select-search__field__wrap input {
+        text-align: left;
+      }
+
+    }
+    .ant-select-selection-selected-value {
+      padding-right: 0;
+      margin-top: 2px;
+      width: 100%;
+      color: @black;
+    }
+    .ant-select-selection__rendered {
+      font-size: 14px;
+    }
+  }
+}
+
+.slate-blue {
+  .z_selection.line {
+    z-index: 2;
+    position: relative;
+    display: inline-block;
+      >.label{
+          color: black;
+          display: block;
+          float: left;
+          line-height: 33px;
+          margin-right: 10px;
+      }
+      .ant-select-selection:hover{
+          border-color: #40a9ff;
+      }
+      .ant-select-selection:focus{
+          border-color: #40a9ff;
+      }
+    .ant-select-selection {
+      height: 34px;
+      //width: 170px;
+      position: relative;
+      box-sizing: border-box;
+      cursor: pointer;
+      border-radius: 4px;
+      background-color: rgba(0, 0, 0, 0);
+      border: 1px solid #e6e6e6;
+      //float: left;
+      text-align: left;
+      font-size: 14px;
+      .ant-select-selection__rendered {
+        width: 140px;
+          line-height: 33px;
+          .ant-select-selection__placeholder {
+          display: inherit;
+          font-size: 14px;
+        }
+      }
+      .ant-select-arrow {
+        color: #000;
+        top: 18%;
+        right: 0px;
+        width: 15%;
+        height: 100%;
+        background-color: inherit;
+        border-left: 1px solid #e6e6e6;
+        //.ant-select-arrow-icon{
+        //    display: inline-block;
+        //    top: 9px;
+        //    position: relative;
+        //}
+      }
+      .ant-select-arrow:before {
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        position: relative;
+      }
+      .ant-select-search__field__wrap input {
+        text-align: left;
+      }
+
+    }
+    .ant-select-focused .ant-select-selection, .ant-select-selection:focus, .ant-select-selection:active {
+      box-shadow: none;
+      //border: 1px solid #40a9ff;
+    }
+    .ant-select-open .ant-select-selection {
+      border: 1px solid #40a9ff;
+      box-shadow: none;
+    }
+    .ant-select-selection-selected-value {
+      padding-right: 1px;
+      width: 90%;
+      color: #000000;
+    }
+    .ant-select-search--inline {
+      top: 2px
+    }
+  }
+  .z_selection.circle {
+    height: 45px;
+    font-family: "微软雅黑";
+    z-index: 4;
+    position: relative;
+    display: inline-block;
+    .ant-select-selection {
+      height: 30px;
+      //width: 170px;
+      position: relative;
+      box-sizing: border-box;
+      cursor: pointer;
+      border: 1px solid @basicPurple;
+      background-color: @white;
+      //float: left;
+      border-radius: 14px;
+      text-align: center;
+      font-size: 16px;
+      .ant-select-arrow {
+        right: 0px;
+        background-position-y: 2px;
+        background-size: 89%;
+        width: 23px;
+        height: 22px;
+        color: @basicPurple;
+        font-size: 14px;
+      }
+      .ant-select-search__field__wrap input {
+        text-align: left;
+      }
+
+    }
+    .ant-select-selection-selected-value {
+      padding-right: 0;
+      width: 100%;
+      color: @black;
+    }
+    .ant-select-selection__rendered {
+      font-size: 14px;
+    }
+  }
+}
+
+.ant-select-dropdown-menu-item {
+  text-align: left;
+}
+.z_selection .ant-select-arrow .ant-select-arrow-icon svg{
+    margin-top: 11px;
+}

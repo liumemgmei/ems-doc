@@ -14,7 +14,7 @@ title:
 
 ````jsx
 import {Button} from 'antd'; 
-import { Bubble} from 'components';
+import { Bubble} from 'ems';
 const divstyle = {
     width:'200px',
     border:'1px solid #ccc',

@@ -31,15 +31,6 @@ function alertBabelConfig(rules) {
 
 module.exports = {
   port: 8001,
-  devServerConfig: {
-    proxy: {
-    //   '/enums': 'http://192.168.2.13:4050',
-      '/ems': {
-        target: 'http://192.168.2.13:4050',
-        pathRewrite: { '^/ems': '' },
-      },
-    },
-  },
   source: {
     components: './components',
     // docs: './docs',
@@ -106,7 +97,7 @@ module.exports = {
   },
   webpackConfig(config) {
     config.resolve.alias = {
-      components: path.join(process.cwd(), 'components'),
+      ems: path.join(process.cwd(), 'components'),
       eq: path.join(process.cwd(), 'components/_util/utils/eq.js'),
       utils: path.join(process.cwd(), 'components/_util/utils/utils.js'),
       shouldComponentUpdate: path.join(process.cwd(), 'components/_util/utils/shouldComponentUpdate.js'),

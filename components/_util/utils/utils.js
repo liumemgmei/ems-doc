@@ -517,7 +517,11 @@ utils.toFixed = function(digit, decimal, number) {
 	}
 	return value;
 };
-
+utils.each= function(arr, fn) {
+    for (var i = 0; i < arr.length; i++) {
+      fn(arr[i],i);
+    }
+}
 utils.getDay = getDay;
 utils.getToday = getToday;
 utils.getTodayAddOne = getTodayAddOne;

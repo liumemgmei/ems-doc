@@ -1,34 +1,47 @@
-@import "../../style/themes/default";
-@import "../../style/mixins/index";
- 
-._a_theme (@color, @hoverColor){
-    color: @color;
-    &:hover{
-        color: @hoverColor;
+
+.btn_default () {
+    font-family: "\5FAE\8F6F\96C5\9ED1";
+    border-radius: 4px;
+    border: none;
+    color: #333;
+    background-color: #e9ecf3;
+    &:hover {
+        color: #fff;
+        background-color: #21B0C9;
+    }
+    &:active {
+        color: #333;
+        background-color: #e9ecf3;
+    }
+
+}
+._button_theme(@color:#333, @bgColor:#e9ecf3, @hoverColor:#fff, @hoverBgColor:#21b0d4){
+    ._button {
+        color: @color;
+        background-color: @bgColor;
+        &:hover {
+            color: @hoverColor;
+            background-color: @hoverBgColor;
+        }
+        &:active {
+            color: @color;
+            background-color: @bgColor;
+        }
     }
 }
-._a {
-    cursor: pointer;
-    margin:0 5px;
-    &:visited,&:focus, &:hover {
-         text-decoration: none;
-     }
-     ._a_theme(#1890ff, #1890ff);
 
- }
- 
- .mint-green{
-     .a {
-        ._a_theme(#1890ff, #1890ff);
-     }
- }
- .space-gray{
-     .a {
-        ._a_theme(#1890ff, #fff);
-     }
- }
- .slate-blue {
-     .a {
-        ._a_theme(#1890ff, #b06ab3);
-     }
- }
+._button {
+    .btn_default();
+}
+
+.mint-green{
+    ._button_theme();
+}
+.space-gray{
+    background-color: #2f3543;
+    padding:20px;
+    ._button_theme(#fff, #85878c,#fff ,#21b0d4);
+}
+.slate-blue {
+    ._button_theme(#333, #e9ecf3, #fff, #4a68da);
+}

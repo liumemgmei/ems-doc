@@ -1,34 +1,9 @@
-@import "../../style/themes/default";
-@import "../../style/mixins/index";
- 
-._a_theme (@color, @hoverColor){
-    color: @color;
-    &:hover{
-        color: @hoverColor;
+.con {
+    & > .ant-spin-nested-loading {
+        width:100%;
+        height:100%;
+    }
+    & >.ant-spin-container {
+        position: static;
     }
 }
-._a {
-    cursor: pointer;
-    margin:0 5px;
-    &:visited,&:focus, &:hover {
-         text-decoration: none;
-     }
-     ._a_theme(#1890ff, #1890ff);
-
- }
- 
- .mint-green{
-     .a {
-        ._a_theme(#1890ff, #1890ff);
-     }
- }
- .space-gray{
-     .a {
-        ._a_theme(#1890ff, #fff);
-     }
- }
- .slate-blue {
-     .a {
-        ._a_theme(#1890ff, #b06ab3);
-     }
- }

@@ -13,7 +13,7 @@ title:
 溢出隐藏出现的气泡可以自定义，使用Popover组件重写溢出展示的气泡弹框
 ````jsx
 import {Button,Popover} from 'antd'; 
-import { Bubble} from 'components';
+import { Bubble} from 'ems';
 
 const divstyle = {
     width:'200px',

@@ -1,41 +1,30 @@
 ---
-order: 2
+order: 1
 title:
-  zh-CN: 基本功能
+  zh-CN: 皮肤功能
   en-US: 基本功能
 ---
 ## zh-CN
 
-文本内容如果超出父容器的宽度，则溢出隐藏出现并且出现省略号，并在鼠标悬浮的时候，展示完整的内容
+基本皮肤样式
 
 ## en-US
 
 文本内容如果超出父容器的宽度，则溢出隐藏出现并且出现省略号，并在鼠标悬浮的时候，展示完整的内容
 
 ````jsx
-import {Button} from 'antd'; 
-import { Bubble} from 'components';
-const divstyle = {
-    width:'200px',
-    border:'1px solid #ccc',
-    lineHeight:'24px',
-    padding:'0 5px',
-    marginTop: '20px'
-};
-class BubbleButton extends React.Component {
 
+import { Button} from 'ems';
+
+class BubbleButton extends React.Component {
+  
 
   render() {
     return (
         <React.Fragment>
-            <div style={divstyle}>
-                <Bubble>早上好！</Bubble>
-            </div> 
-            <div style={divstyle}>
-                <Bubble>
-                    你好啊，中午想吃什么啊，去吃酱爆茄子吧
-                </Bubble>
-            </div> 
+               <div className='mint-green' style={{padding:'20px'}}> <Button >薄荷绿</Button></div>
+               <div className='space-gray' style={{padding:'20px'}}> <Button >深空灰</Button></div>
+               <div className='slate-blue' style={{padding:'20px'}}> <Button >石板蓝</Button></div>
         </React.Fragment>
     );
   }
