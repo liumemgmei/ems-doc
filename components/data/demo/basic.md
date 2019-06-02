@@ -6,7 +6,7 @@ title:
 ---
 ## zh-CN
 
-基本使用, 点击查询之后可以看到打印的查询条件信息 
+打开控制台, 点击查询之后可以看到打印的查询条件信息 
 
 ## en-US
 
@@ -18,18 +18,8 @@ import moment from 'moment';
 import React from 'react';
 import {  Data} from 'ems';
 import _ from 'lodash'
-console.log(Data)
-let socketClient;
 
 class LinkSocket extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      text: '点击链接',
-      result: '暂无数据'
-    };
-  }
-
   submit = (_data) => {
       let data = _.clone(_data);
       data.startMonth = data.startMonth.format('YYYY-MM');
@@ -38,13 +28,16 @@ class LinkSocket extends React.Component {
       data.endDate = data.endDate.format('YYYY-MM-DD');
       data.startTime = data.startTime.format('YYYY-MM-DD HH:mm');
       data.endTime = data.endTime.format('YYYY-MM-DD HH:mm');
-        console.log(data)
+    console.log('查询条件',data)
   }
   onBeforeSubmit = (data) => {
     if (data.endTime.isBefore(data.startTime)) {
         return '结束时间不能小于开始时间';
     }
     return '';
+  }
+  onPanelChange=(value)=>{
+      console.log(value)
   }
   render() {
     return (
@@ -62,16 +55,23 @@ class LinkSocket extends React.Component {
                 }
                 onBeforeSubmit={this.onBeforeSubmit}
                 onSubmit={this.submit}
-                autoSubmit={false}
+                autoSubmit={true}
             >
                 <Data.DateTimePicker label="开始时间: " className="e-ml20" name="startTime"/>
                 <Data.DateTimePicker label="结束时间: " className="e-ml20" name="endTime"/>
-                <Data.RangePickerMonth maxLength={12} name={['startMonth','endMonth']}/>
+                <Data.RangePickerMonth maxLength={12} name={['startMonth','endMonth']}
+                    onPanelChange={this.onPanelChange}
+                />
                 <Data.RangePicker maxLength={3} name={['startDate','endDate']}/>
-                <Data.Select dataSource={[{name: '电池一组',value: 'no1'}, {name: '电池二组', value: 'no2'}]} lable="电池组" className="e-ml20" name="energy"/>
-                <Data.Button autoSubmit={true} className="e-ml20">查询</Data.Button>
+                <Data.Select dataSource={[{name: '电池一组',value: 'no1'}, {name: '电池二组', value: 'no2'}]}
+                    lable="电池组"
+                    className="e-ml20"
+                    name="energy"
+                />
+                <div style={{marginTop:'20px'}}>
+                    <Data.Button autoSubmit={true} className="e-ml20">查询</Data.Button>
+                </div>
             </Data.Central>
-            <div className="f-tac e-mt20">{this.state.result}</div>
       </div>
     );
   }

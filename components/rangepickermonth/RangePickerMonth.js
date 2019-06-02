@@ -6,7 +6,6 @@ import * as React from 'react';
 import shouldComponentUpdate from 'shouldComponentUpdate';
 import {DatePicker} from 'antd';
 const { RangePicker } = DatePicker;
-import contains from 'rc-util/lib/Dom/contains';
 import './style/index.less';
 import $ from 'jquery';
 
@@ -14,15 +13,20 @@ import $ from 'jquery';
 
 
 class RangePickerMonth extends React.Component {
-    constructor(props){
+    constructor(props) {
         super(props);
-        this.shouldComponentUpdate = shouldComponentUpdate.bind(this);
+        // this.shouldComponentUpdate = shouldComponentUpdate.bind(this);
         this.calendar = React.createRef();
     }
-
+    componentDidUpdate() {
+        let picker = this.calendar.current.picker;
+        if (this.isCloseReady && !this.props.isOver) {
+            picker.setState({open: false});
+        }
+    }
     isLastMonth = (target) =>{
         let targetPanel = target.closest('.ant-calendar-month-panel');
-        if($('._rangepickermonth .ant-calendar-month-panel').index(targetPanel) === 1 && target.hasClass('ant-calendar-month-panel-month')){
+        if ($('._rangepickermonth .ant-calendar-month-panel').index(targetPanel) === 1 && target.hasClass('ant-calendar-month-panel-month')) {
             return true;
         }
         return false;
@@ -34,14 +38,7 @@ class RangePickerMonth extends React.Component {
             this.isCloseReady = true;
         }
         else {
-            this.isCloseReady = false; 
-        }
-    }
-
-    componentDidUpdate() {
-        let picker = this.calendar.current.picker;
-        if(this.isCloseReady && !this.props.isOver){
-            picker.setState({open:false})
+            this.isCloseReady = false;
         }
     }
     render() {
@@ -49,21 +46,24 @@ class RangePickerMonth extends React.Component {
         const _className = 'y_RangePicker ' + ( className ? className : '');
 
         return (
-            <span onClick={this.onClick} className={_className}>
+            <span onClick={this.onClick}
+                className={_className}
+            >
                 <RangePicker
+                    allowClear={false}
                     placeholder={['开始月份', '结束月份']}
                     format="YYYY-MM"
                     mode={['month', 'month']}
                     value={value}
                     ref={this.calendar}
-                    // ref = {this.calendar} 
+                    // ref = {this.calendar}
                     // onPanelChange={this.handlePanelChange}
                     renderExtraFooter={renderExtraFooter}
                     dropdownClassName="_rangepickermonth"
                     {...otherProps}
                 />
             </span>
-        )
+        );
     }
 }
 export default RangePickerMonth;

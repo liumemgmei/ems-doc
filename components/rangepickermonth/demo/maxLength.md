@@ -65,7 +65,7 @@ class ControlledRangePicker extends React.Component {
             this.isOver = false;
             this.setState({
                 value:value,
-                key: key + 1,
+                // key: key + 1,
                 isLargeThanMax:false
             });
         }
@@ -80,7 +80,6 @@ class ControlledRangePicker extends React.Component {
                     value={value}
                     onPanelChange={this.onPanelChange}
                     isOver={this.isOver}
-                    key={key}
                 />
             </div>
         );

@@ -18,6 +18,5 @@ subtitle: 月份区间选择
 | 属性 | 说明 | 类型 | 默认值 |
 | --- | --- | --- | --- |
 | maxLength |  | num |  |
-| disabledDate |  | string |  |
 
 
