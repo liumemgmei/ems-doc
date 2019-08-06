@@ -53,6 +53,7 @@ module.exports = {
       其他: 6,
       Other: 6,
       Components: 100,
+
     },
     typeOrder: {
       General: 0,
@@ -69,6 +70,7 @@ module.exports = {
       数据展示: 4,
       反馈: 5,
       其他: 6,
+      万克组件: 7,
     },
     docVersions: {
       '0.9.x': 'http://09x.ant.design',

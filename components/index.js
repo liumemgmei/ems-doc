@@ -13,7 +13,6 @@ if (ENV !== 'production' &&
 }
 /* @remove-on-es-build-end */
 
-export { default as Bubble } from './bubble';
 export { default as Button } from './button';
 export { default as RangePicker } from './rangepicker';
 export { default as RangePickerMonth } from './rangepickermonth';
@@ -21,5 +20,7 @@ export { default as DateTimePicker } from './datetimepicker';
 export { default as axiosCon } from './axioscon';
 export { default as Data } from './data';
 export { default as Select } from './select';
-
-
+export { default as version } from './version';
+export { default as Bubble } from './wankebubble';
+export { default as withCon } from './wankecon';
+export { default as WankeTable } from './wanketable';
